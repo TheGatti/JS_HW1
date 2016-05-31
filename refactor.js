@@ -163,6 +163,8 @@ var foo = "bar";
 
 // Put your answer below -------------------------
 
+var foo;
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -184,6 +186,10 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
+var callNTimes = function(callback, numTimes) {
+  var range = _.range(numTimes);
+  _.each(range, callback);
+};
 
 
 // -----------------------------------------------
@@ -214,6 +220,16 @@ var decreaseScore = function() {
 // Put your answer below -------------------------
 
 
+
+var increaseScore = function(score) {
+  return score++;
+};
+
+var decreaseScore = function(score) {
+  return score--;
+};
+
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -233,6 +249,11 @@ var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
+var addNumbers = function(numberA, numberB) {
+  return numberA + numberB;
+};
+
+var twoPlusTwo = addNumbers(2,2);
 
 // -----------------------------------------------
 
@@ -258,6 +279,15 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+
+var speed = 0;
+
+var accelerate = function(amount) {
+  if (amount === undefined){
+    amount = 1;
+  }
+  speed = speed + amount;
+};
 
 
 // -----------------------------------------------
@@ -306,3 +336,41 @@ var callLater = function(timeout, callback) {
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
+
+var students = ["damon", "philip", "winston", "amanda", "caleb", "geoff", "gabe", "logan", "riggan", "david"]
+students [10] === undefined
+Math.random() === number between 0 and 1
+students.length = 10
+students.length - 1 = last index of array;
+Math.floor()
+
+function randomStudent (anyListOfStudents) {
+  var randomNum = Math.random(); // number between 0 and 1
+  var lengthOfStudentList = anyListOfStudents.length; // total number of students in array
+  var lastIndexOfStudentList = lengthOfStudentList - 1; // last index of the array
+  var guessNumber = Math.floor(randomNum * lengthOfStudentList)
+  return anyListOfStudents [guessNumber];
+}
+
+// to call it : randomStudent(students);
+
+function sum(arr) {
+  var sumOfNum = 0;
+  for(var i = 0; i < arr.length; i++) {
+    sumOfNum += arr[i]; // sumOfNum + arr[i]
+  }
+  return sumOfNum;
+}
+
+sum([1,2,3]);
+
+var name = prompt('Enter your name');
+var gender = prompt("Are you male or female");
+gender = gender.toLowerCase();
+if (gender === "female") {
+  console.log("you said you are female");
+} else if (gender === "male") {
+  console.log("you said you are male");
+} else {
+  console.log("we do not judge");
+}
